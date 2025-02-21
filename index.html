@@ -18,15 +18,12 @@
         h1 {
             color: #ff1493;
             font-size: 24px;
+            margin-bottom: 30px;
         }
         .button-container {
             position: relative;
-            width: 100%;
-            max-width: 300px;
             display: flex;
-            justify-content: center;
             gap: 20px;
-            margin-top: 20px;
         }
         button {
             padding: 10px 20px;
@@ -58,8 +55,12 @@
     <script>
         function moveNoButton() {
             let btn = document.getElementById("no-btn");
-            let x = Math.random() * (window.innerWidth - btn.clientWidth);
-            let y = Math.random() * (window.innerHeight - btn.clientHeight);
+            let container = document.querySelector(".button-container");
+            
+            let x = Math.random() * (window.innerWidth - btn.clientWidth - 50);
+            let y = Math.random() * (window.innerHeight - btn.clientHeight - 50);
+
+            btn.style.position = "absolute";
             btn.style.left = `${x}px`;
             btn.style.top = `${y}px`;
         }
