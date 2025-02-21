@@ -21,9 +21,9 @@
             margin-bottom: 30px;
         }
         .button-container {
-            position: relative;
             display: flex;
-            gap: 20px;
+            width: 220px;
+            justify-content: space-between;
         }
         button {
             padding: 10px 20px;
@@ -36,11 +36,12 @@
         #yes-btn {
             background-color: #ff69b4;
             color: white;
+            position: relative;
         }
         #no-btn {
             background-color: #ff4500;
             color: white;
-            position: absolute;
+            position: relative;
         }
     </style>
 </head>
@@ -55,7 +56,6 @@
     <script>
         function moveNoButton() {
             let btn = document.getElementById("no-btn");
-            let container = document.querySelector(".button-container");
             
             let x = Math.random() * (window.innerWidth - btn.clientWidth - 50);
             let y = Math.random() * (window.innerHeight - btn.clientHeight - 50);
